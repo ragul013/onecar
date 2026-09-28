@@ -1,0 +1,606 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  background: #f6f7fb;
+  color: #171923;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.navbar {
+  min-height: 75px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar nav a {
+  font-weight: 600;
+  color: #555;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #e63946;
+}
+
+.theme-btn {
+  border: none;
+  background: #f1f1f1;
+  padding: 9px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 600px;
+  padding: 100px 8%;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7")
+      center/cover;
+      
+  color: white;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 80px);
+  line-height: 1;
+  margin: 15px 0;
+}
+
+.hero h1 span {
+  color: #ff4757;
+}
+
+.hero p {
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hero-small,
+.section-label {
+  color: #e63946;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero-btn,
+.submit-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 25px;
+
+  background: #e63946;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.section {
+  max-width: 1250px;
+  margin: auto;
+  padding: 80px 5%;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  margin-top: 8px;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+.car-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+
+  transition: 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+}
+
+.car-image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.car-info {
+  padding: 20px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+
+  background: #ffe5e7;
+  color: #e63946;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.car-info h3 {
+  margin-top: 12px;
+  font-size: 22px;
+}
+
+.brand {
+  color: #777;
+  margin: 5px 0 15px;
+}
+
+.car-details {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  color: #666;
+  font-size: 13px;
+}
+
+.car-info h2 {
+  margin: 18px 0;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.details-btn {
+  flex: 1;
+  padding: 11px;
+  text-align: center;
+
+  background: #171923;
+  color: white;
+  border-radius: 7px;
+}
+
+.favorite-btn {
+  width: 48px;
+
+  border: 1px solid #ddd;
+  background: white;
+
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.features {
+  padding: 70px 8%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  background: #171923;
+  color: white;
+}
+
+.features div {
+  text-align: center;
+}
+
+.features span {
+  font-size: 40px;
+}
+
+.features h3 {
+  margin: 15px 0 8px;
+}
+
+.page-header {
+  margin-bottom: 35px;
+}
+
+.page-header h1 {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+.sub-navigation {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.sub-navigation a {
+  padding: 12px 20px;
+
+  background: white;
+  border-radius: 8px;
+
+  font-weight: 600;
+}
+
+.sub-navigation a.active {
+  background: #e63946;
+  color: white;
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+}
+
+.search-container button {
+  width: 55px;
+  border: none;
+
+  background: #e63946;
+  color: white;
+
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.details-page {
+  max-width: 1100px;
+  margin: 80px auto;
+
+  padding: 0 5%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.details-page img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.details-page h1 {
+  font-size: 50px;
+  margin: 15px 0;
+}
+
+.specifications {
+  margin: 25px 0;
+  line-height: 2;
+}
+
+.form-section,
+.content-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 80px 5%;
+}
+
+.car-form {
+  display: grid;
+  gap: 16px;
+}
+
+.car-form input,
+.car-form select,
+.car-form textarea {
+  width: 100%;
+  padding: 14px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  background: white;
+  outline: none;
+}
+
+.car-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.error {
+  padding: 15px;
+  background: #ffe1e1;
+  color: #c62828;
+  border-radius: 8px;
+}
+
+.success {
+  padding: 20px;
+  background: #dff8e6;
+  color: #18753c;
+  border-radius: 8px;
+}
+
+.empty,
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.stats div {
+  padding: 25px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.content-page p {
+  line-height: 1.8;
+  margin-top: 15px;
+}
+
+footer {
+  padding: 50px 5%;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+.small-note {
+  margin-top: 20px;
+  color: #777;
+}
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 4%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar nav {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .car-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .details-page {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 500px;
+    padding: 70px 6%;
+  }
+
+  .section {
+    padding: 55px 5%;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .car-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-navigation {
+    overflow-x: auto;
+  }
+
+  .sub-navigation a {
+    white-space: nowrap;
+  }
+
+  .details-page {
+    margin: 40px auto;
+  }
+
+  .details-page img {
+    height: 280px;
+  }
+
+  .details-page h1 {
+    font-size: 38px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar nav a {
+    font-size: 14px;
+  }
+}
+/* ==============================
+   DARK MODE
+   ============================== */
+
+body.dark {
+  background: #111318;
+  color: #f5f5f5;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background: #1a1c22;
+  border-bottom-color: #30323a;
+}
+
+body.dark .navbar nav a {
+  color: #cccccc;
+}
+
+body.dark .navbar nav a:hover,
+body.dark .navbar nav a.active {
+  color: #ff4757;
+}
+
+/* Sun / Moon button */
+body.dark .theme-btn {
+  background: #2a2d35;
+  color: white;
+}
+
+/* Car cards */
+body.dark .car-card {
+  background: #1a1c22;
+  color: white;
+}
+
+body.dark .brand {
+  color: #aaa;
+}
+
+body.dark .car-details {
+  color: #bbb;
+}
+
+/* Favorite button */
+body.dark .favorite-btn {
+  background: #1a1c22;
+  color: white;
+  border-color: #444;
+}
+
+/* Cars navigation */
+body.dark .sub-navigation a {
+  background: #1a1c22;
+  color: white;
+}
+
+/* Search box */
+body.dark .search-container input {
+  background: #1a1c22;
+  color: white;
+  border-color: #444;
+}
+
+/* Forms */
+body.dark .car-form input,
+body.dark .car-form select,
+body.dark .car-form textarea {
+  background: #1a1c22;
+  color: white;
+  border-color: #444;
+}
+
+/* Stats */
+body.dark .stats div {
+  background: #1a1c22;
+  color: white;
+}
+
+/* Footer */
+body.dark footer {
+  background: #08090c;
+}
+
+/* Smooth transition */
+body,
+.navbar,
+.car-card,
+.favorite-btn,
+.sub-navigation a,
+.car-form input,
+.car-form select,
+.car-form textarea,
+.stats div,
+.theme-btn {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
